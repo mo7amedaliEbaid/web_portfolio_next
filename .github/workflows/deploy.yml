@@ -9,6 +9,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Ensure the workflow has write permissions
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
