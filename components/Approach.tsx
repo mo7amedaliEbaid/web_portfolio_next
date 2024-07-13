@@ -15,8 +15,8 @@ const Approach = () => {
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
+          des="We'll collaborate to map out your app's goals, target audience, 
+          and key functionalities. We'll discuss things like app structure, 
           navigation, and content requirements."
         >
           <CanvasRevealEffect
@@ -51,7 +51,7 @@ const Approach = () => {
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
+          I'll translate everything into functional code, building your app
           from the ground up."
         >
           <CanvasRevealEffect
