@@ -5,12 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-<<<<<<< HEAD
-    "start": "next start"
-=======
     "start": "next start",
     "lint": "next lint"
->>>>>>> 425d75c5683ddeda13352e79c9a790f702ad22e1
   },
   "dependencies": {
     "@react-three/drei": "^9.108.3",
