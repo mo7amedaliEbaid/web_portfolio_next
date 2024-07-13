@@ -73,69 +73,70 @@ export const projects = [
   {
     id: 1,
     title: "Ghazal Parking App",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    des: "Gazelle is a user-friendly mobile app that simplifies parking for car owners and parking attendants.",
+    img: "/p1.jpg",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://apps.apple.com/sa/app/gazelle/id6502878426",
   },
   {
     id: 2,
     title: "Atyab Al-Marshood App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    des: "Atyab Al-Marshood App provides an innovative shopping experience for all of our customers.",
+    img: "/p2.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.line.atyab&pcampaignid=web_share",
   },
   {
     id: 3,
     title: "U-Med App",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    des: "U-Med is a leading firm specialized in comprehensive development of medical institutions. We provide a wide range of services, including marketing, HR management, restructuring, administrative development, and mediating contracts.",
+    img: "/p3.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=inzox.umed.customer&pcampaignid=web_share",
   },
   {
     id: 4,
-    title: "Al Qahtani App",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Nibbles",
+    des: "Nibbles is a Flutter-based food app designed to provide users with a delightful and user-friendly experience as they explore a variety of meals and food packages.",
+    img: "/p4.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://github.com/mo7amedaliEbaid/nibbles-ecommerce-food",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Mohamed Ali was a fantastic experience. His deep understanding of mobile development, especially in Flutter, was evident from day one. Mohamed's commitment to delivering outstanding results and his passion for technology make him an invaluable asset. If you're looking to innovate your mobile app and exceed user expectations, Mohamed is your go-to developer.",
+    name: "Fatima Ahmed",
+    title: "CTO of Digital Innovations",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Yasir Mahmoud was truly refreshing. His meticulous approach to web development and his ability to grasp complex concepts quickly were remarkable. Yasir's dedication to excellence and his creative problem-solving skills make him an outstanding developer. If you're seeking innovation and reliability in your projects, Yasir is the ideal choice.",
+    name: "Yasir Mahmoud",
+    title: "Lead Developer at TechSprint Solutions",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Ahmed Saleh's expertise in blockchain development was crucial to our project's success. His innovative solutions and proactive approach helped us overcome many challenges. Ahmed's professionalism and commitment to delivering high-quality work make him a valuable team member. If you're venturing into blockchain technology, Ahmed is the expert you need.",
+    name: "Ahmed Saleh",
+    title: "Blockchain Architect at CryptoTech Solutions",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Huda Al-Farsi's UX/UI design skills are exceptional. Her ability to blend creativity with user-centric design principles resulted in an intuitive and visually appealing product. Huda's attention to detail and passion for creating meaningful user experiences set her apart. If you're looking to elevate your app's design, Huda is the designer you're looking for.",
+    name: "Huda Al-Farsi",
+    title: "Senior UX/UI Designer at Interface Labs",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Khalid Hassan was a pleasure. His expertise in cloud architecture and scalable solutions was instrumental in optimizing our infrastructure. Khalid's dedication to delivering robust and secure systems is commendable. If you're scaling your cloud operations, Khalid is the expert you can rely on.",
+    name: "Khalid Hassan",
+    title: "Cloud Architect at CloudScale Technologies",
   },
 ];
+
 
 export const companies = [
   {
