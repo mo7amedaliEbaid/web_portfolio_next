@@ -1,9 +1,10 @@
 import { link } from "fs";
 
 export const navItems = [
+  { name: "Home", link: "" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Reviews", link: "#reviews" },
   { name: "Contact", link: "#contact" },
 ];
 
