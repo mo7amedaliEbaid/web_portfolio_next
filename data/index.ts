@@ -165,8 +165,8 @@ export const companies = [
   },
   {
     id: 5,
-    name: "TypeScript",
-    img: "/ts.svg",
+    name: "React Native",
+    img: "/re.svg",
    // nameImg: "/dockerName.svg",
   },
 ];
