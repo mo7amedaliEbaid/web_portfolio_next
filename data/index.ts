@@ -99,6 +99,22 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Alsaif-Express",
+    des: "The AlSaif Express application allows you to track your shipments and manage your deliveries in one place. You can locate the nearest service point to deliver or receive packages, and get quotes for shipments as well. GPS location and camera barcode scanning services are also available.",
+    img: "/sf.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.sit.shipping_client&pcampaignid=web_share",
+  },
+  {
+    id: 4,
+    title: "Al-Anduls",
+    des: "This application is for Al-Andalus Electrical Appliances Company. It's An Ecommerce for electrical products",
+    img: "/and.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://apps.apple.com/us/app/%D8%A7%D9%84%D8%A7%D9%86%D8%AF%D9%84%D8%B3/id6473839184",
+  },
+  {
+    id: 4,
     title: "Nibbles",
     des: "Nibbles is a Flutter-based food app designed to provide users with a delightful and user-friendly experience as they explore a variety of meals and food packages.",
     img: "/p4.png",
