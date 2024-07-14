@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -8,12 +10,12 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I develop and deploy mobile apps for android and ios",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/mob.jpg",
     spareImg: "",
   },
   {
@@ -107,33 +109,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Working with Mohamed Ali was a fantastic experience. His deep understanding of mobile development, especially in Flutter, was evident from day one. Mohamed's commitment to delivering outstanding results and his passion for technology make him an invaluable asset. If you're looking to innovate your mobile app and exceed user expectations, Mohamed is your go-to developer.",
+      "Working with Mohamed was a fantastic experience. His deep understanding of mobile development, especially in Flutter, was evident from day one. Mohamed's commitment to delivering outstanding results and his passion for technology make him an invaluable asset. If you're looking to innovate your mobile app and exceed user expectations, Mohamed is your go-to developer.",
     name: "Fatima Ahmed",
-    title: "CTO of Digital Innovations",
+    title: "CTO of Spark Clouds",
   },
   {
     quote:
-      "Collaborating with Yasir Mahmoud was truly refreshing. His meticulous approach to web development and his ability to grasp complex concepts quickly were remarkable. Yasir's dedication to excellence and his creative problem-solving skills make him an outstanding developer. If you're seeking innovation and reliability in your projects, Yasir is the ideal choice.",
-    name: "Yasir Mahmoud",
-    title: "Lead Developer at TechSprint Solutions",
+      "Collaborating with Mohamed was truly refreshing. His meticulous approach to fFutter development and his ability to grasp complex concepts quickly were remarkable. Mohamed's dedication to excellence and his creative problem-solving skills make him an outstanding developer. If you're seeking innovation and reliability in your projects, Mohamed is the ideal choice.",
+    name: "Mohamed Nasser",
+    title: "Lead Developer at Ammanah Technologies",
   },
   {
     quote:
-      "Ahmed Saleh's expertise in blockchain development was crucial to our project's success. His innovative solutions and proactive approach helped us overcome many challenges. Ahmed's professionalism and commitment to delivering high-quality work make him a valuable team member. If you're venturing into blockchain technology, Ahmed is the expert you need.",
+      "Mohamed Ali's expertise in Mobile development was crucial to our project's success. His innovative solutions and proactive approach helped us overcome many challenges. Mohamed's professionalism and commitment to delivering high-quality work make him a valuable team member. If you're venturing into flutter technology, Mohamed is the expert you need.",
     name: "Ahmed Saleh",
     title: "Blockchain Architect at CryptoTech Solutions",
   },
   {
     quote:
-      "Huda Al-Farsi's UX/UI design skills are exceptional. Her ability to blend creativity with user-centric design principles resulted in an intuitive and visually appealing product. Huda's attention to detail and passion for creating meaningful user experiences set her apart. If you're looking to elevate your app's design, Huda is the designer you're looking for.",
+      "Mohamed's Coding skills are exceptional. His ability to blend creativity with user-centric design principles resulted in an intuitive and visually appealing product. Mohamed's attention to detail and passion for creating meaningful user experiences set him apart. If you're looking to elevate your app's design, Mohamed is the developer you're looking for.",
     name: "Huda Al-Farsi",
-    title: "Senior UX/UI Designer at Interface Labs",
+    title: "Senior UX/UI Designer at Sit",
   },
   {
     quote:
-      "Working with Khalid Hassan was a pleasure. His expertise in cloud architecture and scalable solutions was instrumental in optimizing our infrastructure. Khalid's dedication to delivering robust and secure systems is commendable. If you're scaling your cloud operations, Khalid is the expert you can rely on.",
+      "Working with Mohamed Ali was a pleasure. His expertise in clean architecture and scalable solutions was instrumental in optimizing our infrastructure. Mohamed's dedication to delivering smooth and scalable apps is commendable. If you need and app to grow your business, Mohamed is the expert you can rely on.",
     name: "Khalid Hassan",
-    title: "Cloud Architect at CloudScale Technologies",
+    title: "Saudi Busnessmain",
   },
 ];
 
@@ -165,7 +167,7 @@ export const companies = [
   },
   {
     id: 5,
-    name: "React Native",
+    name: "React.Native",
     img: "/re.svg",
    // nameImg: "/dockerName.svg",
   },
@@ -175,44 +177,49 @@ export const workExperience = [
   {
     id: 1,
     title: "Mobile Application Developer",
+    company: "Spark Clouds",
+    startDate: "Jan 2021",
+    endDate: "Dec 2021",
     desc: "Assisted in the development of a Mobile Native Applications Using Java and Kotlin.",
-    className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
     title: "Flutter Developer",
-    desc: "Designed, developed and Deployes mobile apps for both iOS & Android platforms using Flutter.",
-    className: "md:col-span-2", // change to md:col-span-2
+    company: "U-Med",
+    startDate: "Dec 2022",
+    endDate: "Apr 2022",
+    desc: "Designed, developed and deployed mobile apps for both iOS & Android platforms using Flutter.",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Flutter Developer",
-    desc: "Lead the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    company: "Sit",
+    startDate: "Apr 2022",
+    endDate: "Mar 2024",
+    desc: "Lead the development of a mobile app for a client, from initial concept to deployment on app stores.",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "Senior Mobile Developer",
+    company: "Advanced Technologies",
+    startDate: "Mar 2024",
+    endDate: "Present",
     desc: "Developed and maintained user-facing features using modern mobile technologies.",
-    className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
 ];
-
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link:"https://github.com/mo7amedaliEbaid",
   },
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    link:"https://www.linkedin.com/in/mo7amedebaid/",
   },
 ];
