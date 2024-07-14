@@ -9,12 +9,12 @@ const RecentProjects = () => {
   return (
     <section id="projects">
     
-    <div className="py-20">
+    <div className="py-5">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center gap-14 mt-10">
         {projects.map((item) => (
           
           

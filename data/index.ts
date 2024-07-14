@@ -205,7 +205,7 @@ export const workExperience = [
   {
     id: 4,
     title: "Senior Mobile Developer",
-    company: "Advanced Technologies",
+    company: "Webstdy",
     startDate: "Mar 2024",
     endDate: "Present",
     desc: "Developed and maintained user-facing features using modern mobile technologies.",

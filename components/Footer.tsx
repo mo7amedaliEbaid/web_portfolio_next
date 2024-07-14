@@ -47,9 +47,9 @@ const Footer = () => {
                href={info.link}
                target="_blank"
                rel="noopener noreferrer"
-               className="block w-full"
+             //  className="block w-full"
               >
-                <img src={info.img} alt="icons" width={20} height={20} />
+                <img  src={info.img} alt="icons" width={20} height={20} />
               </a>
             </div>
           ))}
