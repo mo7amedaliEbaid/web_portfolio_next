@@ -92,6 +92,14 @@ export const projects = [
   },
   {
     id: 3,
+    title: "KN",
+    des: "The KN app, approved by the Libyan state, provides social, financial, and logistical services such as job opportunities, a marketplace, and transportation, with features for communication and user financial support.",
+    img: "/kn.png",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.alkafaa.alkafaa_user&pcampaignid=web_share",
+  },
+  {
+    id: 4,
     title: "Meter",
     des: "METER is the ultimate platform connecting providers, customers, and sellers in a seamless, easy-to-use app. Whether you're offering a service, selling products, or looking to hire a professional, METER simplifies the process for everyone involved.",
     img: "/met.png",
@@ -99,7 +107,7 @@ export const projects = [
     link: "https://apps.apple.com/sa/app/meter/id6444586530?l=en",
   },
   {
-    id: 4,
+    id: 5,
     title: "Alsaif-Express",
     des: "The AlSaif Express application allows you to track your shipments and manage your deliveries in one place. You can locate the nearest service point to deliver or receive packages, and get quotes for shipments as well. GPS location and camera barcode scanning services are also available.",
     img: "/sf.png",
@@ -107,7 +115,7 @@ export const projects = [
     link: "https://play.google.com/store/apps/details?id=com.sit.shipping_client&pcampaignid=web_share",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mansour",
     des: "We work in selling, slaughtering, packaging and delivering the best local sheep in refrigerated cars throughout the year in all regions of Riyadh. Our products are distinguished by high quality and reasonable prices.",
     img: "/man.png",
@@ -115,7 +123,7 @@ export const projects = [
     link: "https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D9%88%D8%B1-%D9%84%D9%84%D8%B0%D8%A8%D8%A7%D8%A6%D8%AD/id1394266199?platform=iphone",
   },
   {
-    id: 6,
+    id: 7,
     title: "Garagek",
     des: "Saudi application allows you to request maintenance of your car with the push of a button.",
     img: "/gar.png",
@@ -123,7 +131,7 @@ export const projects = [
     link: "https://play.google.com/store/apps/details?id=com.webstdy.karagak&pcampaignid=web_share",
   },
   {
-    id: 7,
+    id: 8,
     title: "Al-Anduls",
     des: "This application is for Al-Andalus Electrical Appliances Company. It's An Ecommerce for electrical products",
     img: "/and.png",
@@ -131,7 +139,7 @@ export const projects = [
     link: "https://apps.apple.com/us/app/%D8%A7%D9%84%D8%A7%D9%86%D8%AF%D9%84%D8%B3/id6473839184",
   },
   {
-    id: 8,
+    id: 9,
     title: "Nibbles",
     des: "Nibbles is a Flutter-based food app designed to provide users with a delightful and user-friendly experience as they explore a variety of meals and food packages.",
     img: "/p4.png",
