@@ -88,7 +88,7 @@ export const projects = [
     des: "Atyab Al-Marshood App provides an innovative shopping experience for all of our customers.",
     img: "/p2.png",
     iconLists: ["/kotlin.png","/fire.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.line.atyab&pcampaignid=web_share",
+    link: "https://apps.apple.com/us/app/atyab-al-marshoud/id1573579912",
   },
   {
     id: 3,
