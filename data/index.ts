@@ -75,6 +75,14 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 10,
+    title: "Juhayna Survey",
+    des: "Survey app made to Conduct Surveys for Juhayna Food Industries Company.",
+    img: "/juh.png",
+    iconLists: ["/re.png","/dart.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.juhayna.survey&pcampaignid=web_share",
+  },
+  {
     id: 1,
     title: "Ghazal Parking App",
     des: "Gazelle is a user-friendly mobile app that simplifies parking for car owners and parking attendants.",
@@ -251,6 +259,15 @@ export const workExperience = [
     endDate: "Present",
     desc: "Developed and maintained user-facing features using modern mobile technologies.",
     thumbnail: "/exp4.svg",
+  },
+  {
+    id: 5,
+    title: "Mobile Developer",
+    company: "Juhayna Food Industries",
+    startDate: "Sep 2024",
+    endDate: "Dec 2024",
+    desc: "Developed and deployed a survey app to conduct surveys for juhayna company",
+    thumbnail: "/exp2.svg",
   },
 ];
 export const socialMedia = [
