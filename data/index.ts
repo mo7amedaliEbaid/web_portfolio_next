@@ -92,11 +92,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Atyab Al-Marshood App",
-    des: "Atyab Al-Marshood App provides an innovative shopping experience for all of our customers.",
+    title: "AlSari4Cars",
+    des: "Al Sari for Cars App, It is an app that was made to help customers to request cars purchases, services and browse cars news, updates from al sari agencies.",
     img: "/p2.png",
-    iconLists: ["/kotlin.png","/fire.svg"],
-    link: "https://apps.apple.com/us/app/atyab-al-marshoud/id1573579912",
+    iconLists: ["/re.png","/dart.svg","/kotlin.png","/fire.svg"],
+    link: "https://apps.apple.com/sa/app/alsari4cars/id6741610056",
   },
   {
     id: 3,
@@ -112,7 +112,7 @@ export const projects = [
     des: "METER is the ultimate platform connecting providers, customers, and sellers in a seamless, easy-to-use app. Whether you're offering a service, selling products, or looking to hire a professional, METER simplifies the process for everyone involved.",
     img: "/met.png",
     iconLists: ["/re.png","/dart.svg", "/fire.svg"],
-    link: "https://apps.apple.com/sa/app/meter/id6444586530?l=en",
+    link: "https://apps.apple.com/us/app/meter-app/id6664052882",
   },
   {
     id: 5,
