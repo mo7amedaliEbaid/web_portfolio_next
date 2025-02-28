@@ -94,7 +94,7 @@ export const projects = [
     id: 2,
     title: "AlSari4Cars",
     des: "Al Sari for Cars App, It is an app that was made to help customers to request cars purchases, services and browse cars news, updates from al sari agencies.",
-    img: "/p2.png",
+    img: "/sari.png",
     iconLists: ["/re.png","/dart.svg","/kotlin.png","/fire.svg"],
     link: "https://apps.apple.com/sa/app/alsari4cars/id6741610056",
   },
@@ -113,14 +113,6 @@ export const projects = [
     img: "/met.png",
     iconLists: ["/re.png","/dart.svg", "/fire.svg"],
     link: "https://apps.apple.com/us/app/meter-app/id6664052882",
-  },
-  {
-    id: 5,
-    title: "Alsaif-Express",
-    des: "The AlSaif Express application allows you to track your shipments and manage your deliveries in one place. You can locate the nearest service point to deliver or receive packages, and get quotes for shipments as well. GPS location and camera barcode scanning services are also available.",
-    img: "/sf.png",
-    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.sit.shipping_client&pcampaignid=web_share",
   },
   {
     id: 6,
