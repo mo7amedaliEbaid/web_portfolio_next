@@ -124,11 +124,11 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Garagek",
-    des: "Saudi application allows you to request maintenance of your car with the push of a button.",
-    img: "/gar.png",
-    iconLists: ["/re.png","/dart.svg", "/fire.svg","kotlin.png"],
-    link: "https://play.google.com/store/apps/details?id=com.webstdy.karagak&pcampaignid=web_share",
+    title: "Power Punch",
+    des: "Power Punch is a shopping app with a smooth interface, secure payments, product browsing, and order tracking for a fast, reliable experience.",
+    img: "/power.jpg",
+    iconLists: ["/re.png","/dart.svg", "/fire.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.tocaan.powerpunch&pcampaignid=web_share",
   },
   {
     id: 8,
