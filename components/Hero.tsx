@@ -58,7 +58,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Mohamed Ali, a Mobile Developer Specialized in Flutter.
+            Hi! I&apos;m Mohamed Ali, a Mobile Developer Specialized in Flutter with around 5 years of experience and a proven track record of delivering 20 successful applications on both the Play Store and App Store.
           </p>
 
           <a href="#about">
