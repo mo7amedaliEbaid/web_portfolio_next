@@ -8,6 +8,7 @@ import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
+import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <div className="max-w-7xl w-full">
        <FloatingNav navItems={navItems} className="fixed top-10 z-[5000] p-4"/>
         <Hero />
+        <Skills />
         <RecentProjects />
         <Clients />
         <Experience />
