@@ -41,7 +41,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative my-20 z-10 mt-32">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center ">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Mohamed Ali Ebaid
@@ -61,13 +61,13 @@ const Hero = () => {
             Hi! I&apos;m Mohamed Ali, a Mobile Developer Specialized in Flutter with around 5 years of experience and a proven track record of delivering 20 successful applications on both the Play Store and App Store.
           </p>
 
-          <a href="#about">
+          {/* <a href="#projects">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

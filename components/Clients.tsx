@@ -8,10 +8,7 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 const Clients = () => {
   return (
     <section id="skills" className="py-20">
-      <h1 className="heading">
-        Kind words from
-        <span className="text-purple">Skills</span>
-      </h1>
+  
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
         {companies.map((company) => (
@@ -31,9 +28,7 @@ const Clients = () => {
               </div>
             </React.Fragment>
           ))}
-
         </div>
-      </div>
     </section>
   );
 };
