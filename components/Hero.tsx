@@ -99,22 +99,26 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12"
+            className="flex justify-center items-center mt-12"
           >
-            {[
-              { label: "Years Experience", value: "5+" },
-              { label: "Projects Completed", value: "20+" },
-              { label: "App Store Apps", value: "10+" },
-              { label: "Play Store Apps", value: "10+" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-              >
-                <p className="text-2xl font-bold text-purple-500">{stat.value}</p>
-                <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
-              </div>
-            ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl">
+              {[
+                { label: "Years Experience", value: "5+" },
+                { label: "Projects Completed", value: "20+" },
+                { label: "Level", value: "Senior" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+                >
+                  <p className="text-2xl font-bold text-purple-500">{stat.value}</p>
+                  <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
