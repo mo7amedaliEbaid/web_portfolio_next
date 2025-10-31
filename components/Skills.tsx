@@ -81,8 +81,9 @@ const Skills = () => {
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.35, ease: "easeOut", delay: Math.min(index * 0.05, 0.3) }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -90,13 +91,17 @@ const Skills = () => {
                 <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">{skill.description}</p>
-              <div className="w-full bg-gray-700 rounded-full h-2.5">
+              <div className="w-full h-2.5 rounded-full bg-white/10 shadow-inner progress-track">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${skill.level}%` }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                  className="bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full"
-                />
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+                  style={{ willChange: 'width' }}
+                  className="relative h-2.5 rounded-full bg-gradient-to-r from-purple-300 to-blue-300 opacity-90 progress-fill"
+                >
+                  <div className="progress-stripes rounded-full"></div>
+                </motion.div>
               </div>
               <p className="text-right text-sm text-gray-400 mt-2">{skill.level}%</p>
             </motion.div>
