@@ -71,19 +71,10 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {skills.map((skill, index) => (
-            <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {skills.map((skill) => (
+            <div
               key={skill.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.35, ease: "easeOut", delay: Math.min(index * 0.05, 0.3) }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -92,21 +83,17 @@ const Skills = () => {
               </div>
               <p className="text-gray-400 text-sm mb-4">{skill.description}</p>
               <div className="w-full h-2.5 rounded-full bg-white/10 shadow-inner progress-track">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
-                  style={{ willChange: 'width' }}
+                <div
                   className="relative h-2.5 rounded-full bg-gradient-to-r from-purple-300 to-blue-300 opacity-90 progress-fill"
+                  style={{ width: `${skill.level}%` }}
                 >
                   <div className="progress-stripes rounded-full"></div>
-                </motion.div>
+                </div>
               </div>
               <p className="text-right text-sm text-gray-400 mt-2">{skill.level}%</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
