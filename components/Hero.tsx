@@ -1,18 +1,20 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
+import { HiChevronDown } from "react-icons/hi";
 import { motion } from "framer-motion";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
-    
+
     if (targetElement) {
-      const navbarHeight = 80; // Approximate height of navbar
+      const navbarHeight = 80;
       const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
@@ -42,21 +44,40 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-8 py-32">
-          {/* Name and Title */}
+        <div className="flex flex-col items-center justify-center space-y-6 py-20">
+          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center space-y-4"
           >
-            <p className="uppercase tracking-widest text-sm text-blue-100 font-medium">
-              Mohamed Ali Ebaid
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple/10 border border-purple/20 text-purple text-xs font-medium tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              Available for opportunities
+            </span>
+          </motion.div>
+
+          {/* Name */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+              <span className="text-white">
+                Mohamed Ali
+              </span>{" "}
+              <span className="text-purple">
+                Ebaid
+              </span>
+            </h1>
+            <div className="mt-3 flex justify-center">
+              <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-purple/50 to-transparent" />
+            </div>
+            <p className="mt-3 text-lg md:text-xl text-gray-400 font-medium tracking-wide">
+              Senior Mobile Engineer
             </p>
-            <TextGenerateEffect
-              words="Transforming Ideas into Mobile Apps"
-              className="text-center text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500"
-            />
           </motion.div>
 
           {/* Description */}
@@ -64,19 +85,21 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-2xl mx-auto"
           >
-            <p className="text-center text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-              Hi! I&apos;m Mohamed Ali, a Mobile Developer Specialized in Flutter with around 5 years of experience and a proven track record of delivering 20 successful applications on both the Play Store and App Store.
+            <p className="text-center text-sm md:text-base text-gray-400 leading-relaxed">
+              Specialized in Flutter & Dart with 5+ years of experience delivering
+              25+ successful applications on both Play Store and App Store
+              for clients across fintech, healthcare, e-commerce, and more.
             </p>
           </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex gap-4"
+            className="flex flex-col sm:flex-row gap-3"
           >
             <a href="#projects" onClick={(e) => handleScroll(e, 'projects')}>
               <MagicButton
@@ -99,29 +122,50 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex justify-center items-center mt-12"
+            className="flex justify-center items-center mt-4"
           >
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
                 { label: "Years Experience", value: "5+" },
-                { label: "Projects Completed", value: "20+" },
-                { label: "Level", value: "Senior" },
+                { label: "Apps Delivered", value: "25+" },
+                { label: "Companies", value: "6" },
+                { label: "Platforms", value: "iOS & Android" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                  className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+                  className="text-center px-4 py-3"
                 >
-                  <p className="text-2xl font-bold text-purple-500">{stat.value}</p>
-                  <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
+                  <p className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple to-purple/60">
+                    {stat.value}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.a
+        href="#skills"
+        onClick={(e) => handleScroll(e, 'skills')}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-gray-500 hover:text-purple transition-colors cursor-pointer"
+      >
+        <span className="text-[10px] uppercase tracking-widest">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <HiChevronDown className="w-5 h-5" />
+        </motion.div>
+      </motion.a>
     </div>
   );
 };

@@ -1,95 +1,76 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import SectionHeading from "./SectionHeading";
 
 const RecentProjects = () => {
   return (
     <section id="projects">
-    
-    <div className="py-5">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center gap-14 mt-10">
-        {projects.map((item) => (
-          
-          
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
-          >
-            <PinContainer
-              href={item.link}
-              title="Mohamed.Ali.Ebaid"
-            >
-              <a
+      <div className="py-12">
+        <SectionHeading title="Featured" highlight="projects" />
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+          {projects.map((item, index) => (
+            <motion.a
+              key={item.id}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="group relative rounded-xl overflow-hidden cursor-pointer"
+              style={{
+                background: `linear-gradient(135deg, rgba(${18 + index * 4},${12 + index * 3},${45 + index * 5},0.9) 0%, rgba(${10 + index * 3},${14 + index * 2},${38 + index * 4},0.95) 100%)`,
+              }}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                <img src="/bg.png" alt="bgimg" />
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+
+              {/* Image */}
+              <div className="relative h-40 overflow-hidden">
+                <div className="absolute inset-0 bg-[#13162D]">
+                  <img src="/bg.png" alt="" className="w-full h-full object-cover opacity-40" />
                 </div>
                 <img
                   src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-10"
+                  alt={item.title}
+                  className="relative z-10 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
+              {/* Content */}
+              <div className="relative p-4 z-10">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="font-bold text-white text-base line-clamp-1">
+                    {item.title}
+                  </h3>
+                  <FiExternalLink className="w-4 h-4 text-gray-500 group-hover:text-purple transition-colors flex-shrink-0 mt-0.5" />
+                </div>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {item.des}
-              </p>
+                <p className="text-gray-400 text-sm mt-1.5 line-clamp-2 leading-relaxed">
+                  {item.des}
+                </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                {/* Tech Stack */}
+                <div className="flex items-center gap-1 mt-3">
+                  {item.iconLists.map((icon, iconIndex) => (
                     <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      key={iconIndex}
+                      className="w-7 h-7 rounded-full bg-black/40 border border-white/10 flex items-center justify-center"
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <img src={icon} alt="" className="w-3.5 h-3.5" />
                     </div>
-                    
                   ))}
                 </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check App
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
               </div>
-              </a>
-            </PinContainer>
-          </div>
-         
-        ))}
+            </motion.a>
+          ))}
+        </div>
       </div>
-    </div>
     </section>
   );
 };

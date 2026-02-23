@@ -1,56 +1,54 @@
 import React from "react";
 import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
+import SectionHeading from "./SectionHeading";
 
 const Experience = () => {
   return (
     <section id="experience">
-<div className="py-20 w-full">
-      <h1 className="heading">
-        My <span className="text-purple">work experience</span>
-      </h1>
+      <div className="py-12 w-full">
+        <SectionHeading title="My" highlight="work experience" />
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              borderRadius: `calc(1.75rem * 0.96)`,
-            }}
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-          >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.title}
-                className="lg:w-32 md:w-20 w-16"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-white-100 mt-1 font-semibold">
-                  {card.company}
-                </p>
-                <p className="text-start text-white-100 mt-1">
-                  {card.startDate} - {card.endDate}
-                </p>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
+        <div className="w-full mt-8 grid lg:grid-cols-2 grid-cols-1 gap-4 max-w-5xl mx-auto">
+          {workExperience.map((card, index) => (
+            <div
+              key={card.id}
+              className="relative rounded-xl overflow-hidden group"
+              style={{
+                background: `linear-gradient(135deg, rgba(${20 + index * 8},${10 + index * 5},${50 + index * 10},0.9) 0%, rgba(${10 + index * 4},${15 + index * 3},${40 + index * 6},0.95) 100%)`,
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative flex items-start gap-4 p-5">
+                <img
+                  src={card.thumbnail}
+                  alt={card.title}
+                  className="w-12 h-12 flex-shrink-0 mt-0.5"
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                    <h2 className="text-base font-bold text-white">
+                      {card.title}
+                    </h2>
+                    <span className="text-purple font-semibold text-sm">
+                      @ {card.company}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1">
+                    <span className="text-gray-500 text-xs">{card.location}</span>
+                    <span className="text-purple/70 text-xs font-medium">
+                      {card.startDate} - {card.endDate}
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
               </div>
             </div>
-          </Button>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </section>
-    
   );
 };
 

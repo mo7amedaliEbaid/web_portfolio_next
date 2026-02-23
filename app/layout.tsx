@@ -7,8 +7,8 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mohamed Ali's Portfolio",
-  description: "Modern & Minimal Next Portfolio for a Mobile Developer",
+  title: "Mohamed Ali Ebaid | Senior Mobile Engineer",
+  description: "Senior Mobile Engineer specialized in Flutter & Dart with 5+ years of experience and 25+ successful apps on Play Store & App Store.",
 };
 
 export default function RootLayout({
