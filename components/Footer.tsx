@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className="w-full pt-12 pb-8" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 pointer-events-none">
         <img
           src="/footer-grid.svg"
           alt="grid"
@@ -31,7 +31,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-center">
         <SectionHeading title="Let's" highlight="work together" />
         <p className="text-gray-400 mt-4 mb-5 text-center max-w-lg text-sm">
           Looking for a Senior Flutter Engineer? Let&apos;s discuss how I can help
@@ -46,7 +46,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="flex mt-12 md:flex-row flex-col justify-between items-center gap-4">
+      <div className="relative z-10 flex mt-12 md:flex-row flex-col justify-between items-center gap-4">
         <p className="text-xs text-gray-500 font-light">
           Mohamed Ali Ebaid &middot; Senior Mobile Engineer
         </p>
