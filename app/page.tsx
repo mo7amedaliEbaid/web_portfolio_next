@@ -3,7 +3,6 @@
 import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
@@ -17,12 +16,11 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} className="fixed top-10 z-[5000] p-4" />
         <Hero />
+        <Experience />
         <Skills />
         <RecentProjects />
-        <Experience />
         <Education />
         <Certifications />
-        <Approach />
         <Footer />
       </div>
     </main>

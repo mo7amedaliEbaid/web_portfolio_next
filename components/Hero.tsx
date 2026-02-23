@@ -44,12 +44,13 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-6 py-20">
+        <div className="flex flex-col items-center justify-center space-y-4 py-20">
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple/10 border border-purple/20 text-purple text-xs font-medium tracking-wide uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -61,16 +62,12 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="text-white">
-                Mohamed Ali
-              </span>{" "}
-              <span className="text-purple">
-                Ebaid
-              </span>
+              <span className="text-white">Mohamed Ali</span>{" "}
+              <span className="text-purple">Ebaid</span>
             </h1>
             <div className="mt-3 flex justify-center">
               <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-purple/50 to-transparent" />
@@ -81,18 +78,16 @@ const Hero = () => {
           </motion.div>
 
           {/* Description */}
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-2xl mx-auto"
+            className="text-center text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl"
           >
-            <p className="text-center text-sm md:text-base text-gray-400 leading-relaxed">
-              Specialized in Flutter & Dart with 5+ years of experience delivering
-              25+ successful applications on both Play Store and App Store
-              for clients across fintech, healthcare, e-commerce, and more.
-            </p>
-          </motion.div>
+            Specialized in Flutter & Dart with 5+ years of experience delivering
+            25+ successful applications on both Play Store and App Store
+            for clients across fintech, healthcare, e-commerce, and more.
+          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
@@ -122,7 +117,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex justify-center items-center mt-4"
+            className="flex justify-center items-center mt-4 w-full"
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[

@@ -1,7 +1,7 @@
 export const navItems = [
+  { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
   { name: "Education", link: "#education" },
   { name: "Certifications", link: "#certifications" },
   { name: "Contact", link: "#contact" },
@@ -92,6 +92,7 @@ export const workExperience = [
     endDate: "Present",
     desc: "Leading Flutter development for Egypt's next-gen fintech wallet, licensed by the Central Bank.",
     thumbnail: "/exp1.svg",
+    link: "https://www.axisapp.com/",
   },
   {
     id: 2,
@@ -102,6 +103,7 @@ export const workExperience = [
     endDate: "Oct 2025",
     desc: "Consulted on Flutter architecture and delivered multiple client apps including e-commerce and gaming platforms.",
     thumbnail: "/exp2.svg",
+    link: "https://tocaan.com",
   },
   {
     id: 3,
@@ -112,6 +114,7 @@ export const workExperience = [
     endDate: "Sept 2025",
     desc: "Developed and maintained user-facing mobile applications using Flutter with Clean Architecture and CI/CD.",
     thumbnail: "/exp3.svg",
+    link: "https://webstdy.com",
   },
   {
     id: 4,
@@ -122,6 +125,7 @@ export const workExperience = [
     endDate: "Dec 2024",
     desc: "Built and deployed an enterprise survey application for internal company operations.",
     thumbnail: "/exp4.svg",
+    link: "https://www.juhayna.com",
   },
   {
     id: 5,
@@ -132,6 +136,7 @@ export const workExperience = [
     endDate: "Jan 2024",
     desc: "Led mobile app development from initial concept to deployment on both App Store and Play Store.",
     thumbnail: "/exp3.svg",
+    link: "https://www.sitksa-eg.com/en",
   },
   {
     id: 6,
@@ -142,6 +147,7 @@ export const workExperience = [
     endDate: "Nov 2021",
     desc: "Developed native Android applications using Java and Kotlin, and transitioned to Flutter development.",
     thumbnail: "/exp1.svg",
+    link: "https://spark-cloud.com/",
   },
 ];
 
