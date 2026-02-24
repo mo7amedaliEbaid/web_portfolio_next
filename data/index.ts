@@ -12,9 +12,9 @@ export const projects = [
     id: 1,
     title: "Axis Pay",
     des: "Egypt's next-generation fintech wallet, licensed by the Central Bank. Receive salary, send/receive money, and pay bills seamlessly.",
-    img: "/p2.png",
-    iconLists: ["/re.png", "/dart.svg", "/fire.svg"],
-    link: "https://play.google.com/store/apps/details?id=com.axis.pay",
+    img: "/axis.png",
+    iconLists: ["/re.png", "/dart.svg", "/fire.svg", "/kotlin.png", "swift.svg"],
+    link: "https://play.google.com/store/apps/details?id=com.axispay.consumer.wallet&pcampaignid=web_share",
   },
   {
     id: 2,
