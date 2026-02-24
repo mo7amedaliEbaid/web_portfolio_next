@@ -84,7 +84,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl"
           >
-            Specialized in Flutter & Dart with 5+ years of experience delivering
+            Specialized in Flutter & Dart with 6+ years of experience delivering
             25+ successful applications on both Play Store and App Store
             for clients across fintech, healthcare, e-commerce, and more.
           </motion.p>
@@ -121,7 +121,7 @@ const Hero = () => {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
-                { label: "Years Experience", value: "5+" },
+                { label: "Years Experience", value: "6+" },
                 { label: "Apps Delivered", value: "25+" },
                 { label: "Companies", value: "6" },
                 { label: "Platforms", value: "iOS & Android" },
