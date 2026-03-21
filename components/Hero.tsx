@@ -44,7 +44,7 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-4 py-20">
+        <div className="flex flex-col items-center justify-center space-y-4 pt-24 sm:pt-20 pb-20">
 
           {/* Badge */}
           <motion.div
