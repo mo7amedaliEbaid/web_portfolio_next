@@ -1,5 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 import MagicButton from "./MagicButton";
 import SectionHeading from "./SectionHeading";
@@ -16,6 +17,18 @@ const socialLinks = [
     icon: <FaLinkedinIn className="w-5 h-5" />,
     link: "https://www.linkedin.com/in/mo7amedebaid/",
     label: "LinkedIn",
+  },
+  {
+    id: 3,
+    icon: <FaYoutube className="w-5 h-5" />,
+    link: "https://www.youtube.com/channel/UCcaLYqe9DJGdqexSQSIgs7w",
+    label: "YouTube",
+  },
+  {
+    id: 4,
+    icon: <SiLeetcode className="w-5 h-5" />,
+    link: "https://leetcode.com/mo7amedaliebaid",
+    label: "LeetCode",
   },
 ];
 
@@ -34,7 +47,7 @@ const Footer = () => {
       <div className="relative z-10 flex flex-col items-center">
         <SectionHeading title="Let's" highlight="work together" />
         <p className="text-gray-400 mt-4 mb-5 text-center max-w-lg text-sm">
-          Looking for a Senior Flutter Engineer? Let&apos;s discuss how I can help
+          Looking for a Senior Mobile Engineer? Let&apos;s discuss how I can help
           bring your mobile app ideas to life.
         </p>
         <a href="mailto:mo7amedaliebaid@gmail.com" target="_blank" rel="noopener noreferrer">

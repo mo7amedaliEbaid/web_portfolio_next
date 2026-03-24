@@ -72,9 +72,9 @@ const Hero = () => {
             <div className="mt-3 flex justify-center">
               <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-purple/50 to-transparent" />
             </div>
-            <p className="mt-3 text-lg md:text-xl text-gray-400 font-medium tracking-wide">
+            <h2 className="mt-3 text-lg md:text-xl text-gray-400 font-medium tracking-wide">
               Senior Mobile Engineer
-            </p>
+            </h2>
           </motion.div>
 
           {/* Description */}
@@ -84,9 +84,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl"
           >
-            Specialized in Flutter & Dart with 6+ years of experience delivering
-            25+ successful applications on both Play Store and App Store
-            for clients across fintech, healthcare, e-commerce, and more.
+            6+ years of experience building high-performance mobile applications
+            across Android, iOS, and cross-platform (Flutter). 25+ production apps
+            on Play Store & App Store for clients across fintech, healthcare, e-commerce, and more.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -6,9 +6,9 @@ import {
   SiFlutter, SiDart, SiSwift, SiKotlin, SiFirebase,
   SiGraphql, SiPostman, SiJira, SiFigma, SiGit,
   SiGithub, SiGitlab, SiBitbucket, SiAndroidstudio,
-  SiXcode, SiHive,
+  SiXcode, SiHive, SiJetpackcompose,
 } from "react-icons/si";
-import { FaReact, FaJava } from "react-icons/fa";
+import { FaReact, FaJava, FaAndroid, FaApple } from "react-icons/fa";
 import { TbApi, TbBrandSocketIo } from "react-icons/tb";
 import { MdArchitecture } from "react-icons/md";
 
@@ -16,11 +16,12 @@ const skillCategories = [
   {
     title: "Languages & Frameworks",
     skills: [
+      { name: "Kotlin", icon: <SiKotlin className="text-purple-500" /> },
+      { name: "Swift", icon: <SiSwift className="text-orange-500" /> },
       { name: "Flutter", icon: <SiFlutter className="text-sky-400" /> },
       { name: "Dart", icon: <SiDart className="text-blue-500" /> },
-      { name: "Swift", icon: <SiSwift className="text-orange-500" /> },
       { name: "SwiftUI", icon: <SiSwift className="text-blue-400" /> },
-      { name: "Kotlin", icon: <SiKotlin className="text-purple-500" /> },
+      { name: "Jetpack Compose", icon: <SiJetpackcompose className="text-green-400" /> },
       { name: "Java", icon: <FaJava className="text-red-500" /> },
     ],
   },
@@ -64,13 +65,13 @@ const skillCategories = [
     ],
   },
   {
-    title: "State Management",
+    title: "State Management & UI Patterns",
     skills: [
-      { name: "Bloc", icon: <SiFlutter className="text-blue-400" /> },
-      { name: "Cubit", icon: <SiFlutter className="text-blue-300" /> },
+      { name: "Bloc / Cubit", icon: <SiFlutter className="text-blue-400" /> },
       { name: "Provider", icon: <SiFlutter className="text-green-400" /> },
       { name: "Riverpod", icon: <SiFlutter className="text-purple-400" /> },
-      { name: "GetX", icon: <SiFlutter className="text-orange-400" /> },
+      { name: "ViewModel (Android)", icon: <FaAndroid className="text-green-500" /> },
+      { name: "Combine (iOS)", icon: <FaApple className="text-gray-300" /> },
       { name: "Redux", icon: <FaReact className="text-purple-500" /> },
     ],
   },
