@@ -47,8 +47,8 @@ const Footer = () => {
       <div className="relative z-10 flex flex-col items-center">
         <SectionHeading title="Let's" highlight="work together" />
         <p className="text-gray-400 mt-4 mb-5 text-center max-w-lg text-sm">
-          Looking for a Senior Mobile Engineer? Let&apos;s discuss how I can help
-          bring your mobile app ideas to life.
+          Looking for a Senior Mobile Engineer? Let&apos;s discuss how I can
+          contribute to your mobile team.
         </p>
         <a href="mailto:mo7amedaliebaid@gmail.com" target="_blank" rel="noopener noreferrer">
           <MagicButton

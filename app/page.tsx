@@ -9,7 +9,7 @@ import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
-import Approach from "@/components/Approach";
+
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
         <Experience />
         <Skills />
         <RecentProjects />
-        <Approach />
+
         <Education />
         <Certifications />
         <Footer />

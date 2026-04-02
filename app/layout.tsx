@@ -8,8 +8,7 @@ import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// TODO: Replace with your custom domain once deployed
-const SITE_URL = "https://mohamedaliebaid.vercel.app";
+const SITE_URL = "https://mohamedaliebaid.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -77,6 +76,7 @@ const jsonLd = {
     "https://www.linkedin.com/in/mo7amedebaid/",
     "https://www.youtube.com/channel/UCcaLYqe9DJGdqexSQSIgs7w",
     "https://leetcode.com/mo7amedaliebaid",
+    "https://medium.com/@mo7amedaliebaid",
   ],
   knowsAbout: [
     "Flutter",
