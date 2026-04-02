@@ -3,7 +3,7 @@
 Modern, animated developer portfolio built with Next.js 14 App Router, Tailwind CSS, and Framer Motion. It features animated hero sections, a globe visualization, a projects grid, an experience/education timeline, and a skills section with animated progress bars.
 
 ### Live Demo
-- [View the deployed portfolio](https://mohamedaliportfolio-mohameds-projects-55b46c5d.vercel.app/)
+- [View the deployed portfolio](https://mohamedaliebaid.com/)
 
 ### Features
 - **Next.js 14 App Router** with server-first defaults
