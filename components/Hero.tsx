@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <div className="min-h-screen relative flex items-center justify-center overflow-hidden w-full">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <Spotlight
