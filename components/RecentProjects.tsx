@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
 import { projects } from "@/data";
 import SectionHeading from "./SectionHeading";
@@ -30,13 +31,23 @@ const RecentProjects = () => {
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-[#13162D]">
-                  <img src="/bg.png" alt="" className="w-full h-full object-cover opacity-30" />
+                  <Image 
+                    src="/bg.png" 
+                    alt="background pattern" 
+                    fill 
+                    className="object-cover opacity-30" 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="relative z-10 w-full h-full object-contain p-5 group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative z-10 w-full h-full p-5 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
               </div>
 
               {/* Content */}
@@ -58,7 +69,9 @@ const RecentProjects = () => {
                         className="w-7 h-7 rounded-full bg-black/40 border border-white/10 flex items-center justify-center overflow-hidden"
                       >
                         {typeof icon === "string" ? (
-                          <img src={icon} alt="" className="w-3.5 h-3.5" />
+                          <div className="relative w-3.5 h-3.5">
+                            <Image src={icon} alt="tech stack icon" fill className="object-contain" />
+                          </div>
                         ) : (
                           <div className="flex items-center justify-center w-full h-full scale-[0.8]">
                             {icon}

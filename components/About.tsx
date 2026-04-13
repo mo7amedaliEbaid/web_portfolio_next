@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { SiFlutter, SiKotlin, SiSwift } from "react-icons/si";
 import { MdArchitecture } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
 
 const expertiseAreas = [
   {
@@ -49,7 +50,7 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-6"
         >
-          <p className="text-gray-400 text-center leading-relaxed text-sm md:text-base max-w-3xl mx-auto">
+          <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base max-w-3xl mx-auto">
             I&apos;m a Senior Mobile Engineer with 6+ years of hands-on experience
             shipping high-performance applications across Android, iOS, and
             cross-platform (Flutter). With 25+ production apps on Google Play and
@@ -57,7 +58,7 @@ const About = () => {
             enterprise solutions — I focus on clean architecture, scalability, and
             exceptional user experiences.
           </p>
-          <p className="text-gray-500 text-center text-sm max-w-3xl mx-auto mt-3">
+          <p className="text-gray-400 text-center text-sm md:text-base max-w-3xl mx-auto mt-4 leading-relaxed">
             I pick the right tool for the job: native Kotlin for Android-deep
             integrations, Swift for Apple-first experiences, or Flutter for rapid
             cross-platform delivery. Whatever the stack, the code is built to scale.
@@ -65,15 +66,23 @@ const About = () => {
         </motion.div>
 
         {/* Open source callout */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center text-xs text-gray-600 mt-4"
+          className="flex justify-center mt-6"
         >
-          Active open source contributor with 90+ repositories on GitHub
-        </motion.p>
+          <a
+            href="https://github.com/mo7amedaliEbaid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-black-200/50 hover:bg-white/5 hover:border-purple/30 transition-all duration-300 text-xs md:text-sm text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple/50"
+          >
+            <FaGithub className="w-4 h-4" />
+            <span>Active open source contributor with <strong>90+ repositories</strong></span>
+          </a>
+        </motion.div>
 
         {/* Expertise cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">

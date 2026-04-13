@@ -1,6 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import Image from "next/image";
 
 import MagicButton from "./MagicButton";
 import SectionHeading from "./SectionHeading";
@@ -37,10 +38,11 @@ const Footer = () => {
     <footer className="w-full pt-12 pb-8" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96 pointer-events-none">
-        <img
+        <Image
           src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50"
+          alt="background grid"
+          fill
+          className="object-cover opacity-50"
         />
       </div>
 
@@ -50,7 +52,12 @@ const Footer = () => {
           Looking for a Senior Mobile Engineer? Let&apos;s discuss how I can
           contribute to your mobile team.
         </p>
-        <a href="mailto:mo7amedaliebaid@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a 
+          href="mailto:mo7amedaliebaid@gmail.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50 focus:ring-offset-2 focus:ring-offset-black-100"
+        >
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -72,7 +79,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={info.label}
-              className="w-9 h-9 flex justify-center items-center bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-purple/30 transition-all duration-300 text-gray-400 hover:text-white"
+              className="w-9 h-9 flex justify-center items-center bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 hover:border-purple/30 transition-all duration-300 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple/50 focus:ring-offset-2 focus:ring-offset-black-100"
             >
               {info.icon}
             </a>
