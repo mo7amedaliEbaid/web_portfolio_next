@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 
-// TODO: Replace with your custom domain once deployed
-const SITE_URL = "https://mohamedaliebaid.vercel.app";
+const SITE_URL = "https://mohamedaliebaid.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
