@@ -7,11 +7,15 @@ import {
   SiFlutter, SiDart, SiSwift, SiKotlin, SiFirebase,
   SiGraphql, SiPostman, SiJira, SiFigma, SiGit,
   SiGithub, SiGitlab, SiBitbucket, SiAndroidstudio,
-  SiXcode, SiHive, SiJetpackcompose,
+  SiXcode, SiHive, SiJetpackcompose, SiSwagger, SiTrello,
+  SiGithubactions,
 } from "react-icons/si";
-import { FaReact, FaJava, FaAndroid, FaApple } from "react-icons/fa";
+import {
+  FaReact, FaJava, FaAndroid, FaApple,
+  FaDatabase, FaRocket, FaBug,
+} from "react-icons/fa";
 import { TbApi, TbBrandSocketIo } from "react-icons/tb";
-import { MdArchitecture } from "react-icons/md";
+import { MdArchitecture, MdNotifications, MdGroups } from "react-icons/md";
 
 const skillCategories = [
   {
@@ -25,6 +29,8 @@ const skillCategories = [
       { name: "SwiftUI", icon: <SiSwift className="text-blue-400" /> },
       { name: "Jetpack Compose", icon: <SiJetpackcompose className="text-green-400" /> },
       { name: "Java", icon: <FaJava className="text-red-500" /> },
+      { name: "React Native", icon: <FaReact className="text-cyan-400" /> },
+      { name: "Objective-C", icon: <FaApple className="text-gray-400" /> },
     ],
   },
   {
@@ -37,10 +43,15 @@ const skillCategories = [
       { name: "GitLab", icon: <SiGitlab className="text-orange-400" /> },
       { name: "Bitbucket", icon: <SiBitbucket className="text-blue-500" /> },
       { name: "Jira", icon: <SiJira className="text-blue-600" /> },
+      { name: "Trello", icon: <SiTrello className="text-blue-400" /> },
       { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+      { name: "Swagger", icon: <SiSwagger className="text-green-400" /> },
       { name: "Android Studio", icon: <SiAndroidstudio className="text-green-500" /> },
       { name: "Xcode", icon: <SiXcode className="text-blue-500" /> },
       { name: "Figma", icon: <SiFigma className="text-purple-400" /> },
+      { name: "GitHub Actions", icon: <SiGithubactions className="text-gray-300" /> },
+      { name: "Fastlane", icon: <FaRocket className="text-red-400" /> },
+      { name: "Shorebird", icon: <SiFlutter className="text-teal-400" /> },
     ],
   },
   {
@@ -51,8 +62,14 @@ const skillCategories = [
       { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
       { name: "Google Maps", icon: <TbApi className="text-blue-400" /> },
       { name: "WebSockets", icon: <TbBrandSocketIo className="text-yellow-400" /> },
+      { name: "Socket.IO", icon: <TbBrandSocketIo className="text-gray-300" /> },
       { name: "Stripe", icon: <TbApi className="text-purple-400" /> },
       { name: "Agora", icon: <TbApi className="text-blue-300" /> },
+      { name: "OneSignal", icon: <MdNotifications className="text-red-400" /> },
+      { name: "Retrofit", icon: <TbApi className="text-orange-400" /> },
+      { name: "Room", icon: <FaDatabase className="text-green-500" /> },
+      { name: "Alamofire", icon: <TbApi className="text-orange-300" /> },
+      { name: "Core Data", icon: <FaDatabase className="text-blue-400" /> },
       { name: "SQflite", icon: <SiHive className="text-gray-400" /> },
       { name: "Hive", icon: <SiHive className="text-amber-400" /> },
     ],
@@ -64,9 +81,12 @@ const skillCategories = [
       { name: "Clean Architecture", icon: <MdArchitecture className="text-blue-400" /> },
       { name: "SOLID Principles", icon: <MdArchitecture className="text-green-400" /> },
       { name: "Design Patterns", icon: <MdArchitecture className="text-purple-400" /> },
-      { name: "MVC / MVVM / MVP", icon: <MdArchitecture className="text-orange-400" /> },
+      { name: "MVC / MVVM / MVP / MVI", icon: <MdArchitecture className="text-orange-400" /> },
       { name: "TDD / DDD", icon: <MdArchitecture className="text-cyan-400" /> },
       { name: "CI/CD", icon: <MdArchitecture className="text-yellow-400" /> },
+      { name: "Agile / Scrum", icon: <MdGroups className="text-teal-400" /> },
+      { name: "Git Flow", icon: <SiGit className="text-orange-500" /> },
+      { name: "Code Review", icon: <MdArchitecture className="text-gray-400" /> },
     ],
   },
   {
@@ -76,9 +96,24 @@ const skillCategories = [
       { name: "Bloc / Cubit", icon: <SiFlutter className="text-blue-400" /> },
       { name: "Provider", icon: <SiFlutter className="text-green-400" /> },
       { name: "Riverpod", icon: <SiFlutter className="text-purple-400" /> },
+      { name: "GetX", icon: <SiFlutter className="text-pink-400" /> },
       { name: "ViewModel (Android)", icon: <FaAndroid className="text-green-500" /> },
       { name: "Combine (iOS)", icon: <FaApple className="text-gray-300" /> },
       { name: "Redux", icon: <FaReact className="text-purple-500" /> },
+    ],
+  },
+  {
+    title: "Testing",
+    color: "text-rose-400",
+    skills: [
+      { name: "Unit Testing", icon: <FaBug className="text-rose-400" /> },
+      { name: "Widget Testing", icon: <FaBug className="text-pink-400" /> },
+      { name: "Integration Testing", icon: <FaBug className="text-orange-400" /> },
+      { name: "Mockito", icon: <FaBug className="text-yellow-400" /> },
+      { name: "BLoC Test", icon: <SiFlutter className="text-blue-400" /> },
+      { name: "XCTest", icon: <FaApple className="text-gray-300" /> },
+      { name: "Espresso", icon: <FaAndroid className="text-green-400" /> },
+      { name: "JUnit", icon: <FaJava className="text-red-400" /> },
     ],
   },
 ];
