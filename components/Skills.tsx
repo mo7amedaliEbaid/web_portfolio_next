@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import {
   SiFlutter, SiDart, SiSwift, SiKotlin, SiFirebase,
@@ -15,6 +16,7 @@ import { MdArchitecture } from "react-icons/md";
 const skillCategories = [
   {
     title: "Languages & Frameworks",
+    color: "text-sky-400",
     skills: [
       { name: "Kotlin", icon: <SiKotlin className="text-purple-500" /> },
       { name: "Swift", icon: <SiSwift className="text-orange-500" /> },
@@ -27,6 +29,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Platforms",
+    color: "text-orange-400",
     skills: [
       { name: "Firebase", icon: <SiFirebase className="text-amber-500" /> },
       { name: "Git", icon: <SiGit className="text-orange-600" /> },
@@ -42,6 +45,7 @@ const skillCategories = [
   },
   {
     title: "APIs & Libraries",
+    color: "text-green-400",
     skills: [
       { name: "RESTful APIs", icon: <TbApi className="text-green-400" /> },
       { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
@@ -55,6 +59,7 @@ const skillCategories = [
   },
   {
     title: "Architecture & Patterns",
+    color: "text-violet-400",
     skills: [
       { name: "Clean Architecture", icon: <MdArchitecture className="text-blue-400" /> },
       { name: "SOLID Principles", icon: <MdArchitecture className="text-green-400" /> },
@@ -65,7 +70,8 @@ const skillCategories = [
     ],
   },
   {
-    title: "State Management & UI Patterns",
+    title: "State Management",
+    color: "text-cyan-400",
     skills: [
       { name: "Bloc / Cubit", icon: <SiFlutter className="text-blue-400" /> },
       { name: "Provider", icon: <SiFlutter className="text-green-400" /> },
@@ -77,7 +83,30 @@ const skillCategories = [
   },
 ];
 
+const ALL_SKILLS = "All";
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+};
+
 const Skills = () => {
+  const [activeFilter, setActiveFilter] = useState(ALL_SKILLS);
+
+  const filters = [ALL_SKILLS, ...skillCategories.map((c) => c.title)];
+
+  const visibleCategories =
+    activeFilter === ALL_SKILLS
+      ? skillCategories
+      : skillCategories.filter((c) => c.title === activeFilter);
+
+  const totalSkills = skillCategories.reduce((acc, c) => acc + c.skills.length, 0);
+
   return (
     <section id="skills" className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,33 +116,67 @@ const Skills = () => {
           subtitle="Proficient in a wide range of technologies for mobile development"
         />
 
-        <div className="space-y-5">
-          {skillCategories.map((category, catIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: catIndex * 0.08 }}
-              className="bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-xl p-5"
-            >
-              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 text-center">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2.5">
-                {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple/30 transition-all duration-300"
-                  >
-                    <span className="text-base">{skill.icon}</span>
-                    <span className="text-sm text-gray-300 font-medium">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        {/* Stats */}
+        <p className="text-center text-gray-500 text-sm mt-2 mb-6">
+          {totalSkills} skills across {skillCategories.length} categories
+        </p>
+
+        {/* Filter tabs */}
+        <div className="flex flex-wrap gap-2 justify-center mb-8">
+          {filters.map((filter) => {
+            const cat = skillCategories.find((c) => c.title === filter);
+            return (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${activeFilter === filter
+                    ? "bg-purple text-white border-purple shadow-[0_0_12px_rgba(120,87,255,0.4)]"
+                    : "bg-white/[0.02] text-gray-400 border-white/[0.08] hover:border-purple/30 hover:text-white"
+                  }`}
+              >
+                {filter}
+                {filter !== ALL_SKILLS && cat && (
+                  <span className="ml-1.5 opacity-50">{cat.skills.length}</span>
+                )}
+              </button>
+            );
+          })}
         </div>
+
+        {/* Skill category cards */}
+        <motion.div
+          key={activeFilter}
+          className="space-y-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <AnimatePresence mode="popLayout">
+            {visibleCategories.map((category) => (
+              <motion.div
+                key={category.title}
+                variants={itemVariants}
+                layout
+                className="bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] rounded-xl p-5"
+              >
+                <h3 className={`text-sm font-semibold uppercase tracking-wider mb-3 text-center ${category.color}`}>
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  {category.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple/30 transition-all duration-300"
+                    >
+                      <span className="text-base">{skill.icon}</span>
+                      <span className="text-sm text-gray-300 font-medium">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
