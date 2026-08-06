@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Mohamed Ali Ebaid",
   },
   description:
-    "Senior Mobile Engineer with 6+ years of experience building high-performance Android, iOS, and cross-platform (Flutter) mobile applications. 25+ production apps on Play Store & App Store.",
+    "Senior Mobile Engineer with 6+ years of experience building high-performance Android, iOS, and cross-platform (Flutter, React Native) mobile applications. 25+ production apps on Play Store & App Store.",
   keywords: [
     "Mobile Engineer",
     "Flutter Developer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Mohamed Ali Ebaid | Senior Mobile Engineer",
     description:
-      "Senior Mobile Engineer with 6+ years of experience building high-performance Android, iOS, and cross-platform (Flutter) mobile applications. 25+ production apps on Play Store & App Store.",
+      "Senior Mobile Engineer with 6+ years of experience building high-performance Android, iOS, and cross-platform (Flutter, React Native) mobile applications. 25+ production apps on Play Store & App Store.",
     siteName: "Mohamed Ali Ebaid Portfolio",
     url: SITE_URL,
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohamed Ali Ebaid | Senior Mobile Engineer",
     description:
-      "Senior Mobile Engineer | Flutter \u2022 Android (Kotlin) \u2022 iOS (Swift) | 25+ Production Apps",
+      "Senior Mobile Engineer | Flutter \u2022 Android (Kotlin) \u2022 iOS (Swift) \u2022 React Native | 25+ Production Apps",
   },
   robots: {
     index: true,
@@ -81,6 +81,7 @@ const jsonLd = {
   knowsAbout: [
     "Flutter",
     "Dart",
+    "React Native",
     "Android Development",
     "Kotlin",
     "iOS Development",

@@ -10,9 +10,9 @@ const expertiseAreas = [
   {
     icon: <SiFlutter className="w-7 h-7 text-sky-400" />,
     title: "Cross-Platform",
-    subtitle: "Flutter & Dart",
+    subtitle: "Flutter & React Native",
     description:
-      "Production-scale apps with shared codebases, delivering consistent experiences across Android and iOS.",
+      "Production-scale apps with shared codebases across Android and iOS — Flutter in production, React Native (Meta certified).",
   },
   {
     icon: <SiKotlin className="w-7 h-7 text-purple-500" />,
@@ -60,8 +60,9 @@ const About = () => {
           </p>
           <p className="text-gray-400 text-center text-sm md:text-base max-w-3xl mx-auto mt-4 leading-relaxed">
             I pick the right tool for the job: native Kotlin for Android-deep
-            integrations, Swift for Apple-first experiences, or Flutter for rapid
-            cross-platform delivery. Whatever the stack, the code is built to scale.
+            integrations, Swift for Apple-first experiences, Flutter for rapid
+            cross-platform delivery, and React Native (Meta certified) where that&apos;s
+            the right fit. Whatever the stack, the code is built to scale.
           </p>
         </motion.div>
 

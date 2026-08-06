@@ -85,7 +85,7 @@ const Hero = () => {
             className="text-center text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl"
           >
             6+ years of experience building high-performance mobile applications
-            across Android, iOS, and cross-platform (Flutter). 25+ production apps
+            across Android, iOS, and cross-platform (Flutter, React Native). 25+ production apps
             on Play Store & App Store for clients across fintech, healthcare, e-commerce, and more.
           </motion.p>
 
